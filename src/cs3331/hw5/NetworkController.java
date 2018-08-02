@@ -25,6 +25,8 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
     public NetworkGUI view;
     private Board model;
     private NetworkAdapter network;
+    // 1 is Server, 2 is client
+    private int isServer;
 
     private NetworkController(Board model, NetworkGUI gui) {
 
@@ -32,36 +34,11 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         view = gui;
         this.model = model;
 
-        //view.addNetworkClientListener(new ClientListener());
-        //view.addNetworkServerListener(new ServerListener());
         view.addOnlineButtonListener(new OnlineListener());
         view.addMouseListener(new ClickAdapter());
         view.addConnectListener(new ClientListener());
         view.addHostButtonListener(new ServerListener());
-        //view.addS
-        //view.addPlayListener(new PlayListener());
-        //view.addPlayListener(this::playPerform);
         view.addDisconnectListener(e -> disconnectListener());
-    }
-
-    private void disconnectListener() {
-            network.close();
-            isNetwork();
-
-    }
-
-    class ClickAdapter extends MouseAdapter {
-        public void mousePressed(MouseEvent e) {
-            int[] dummy = new int[1];
-            super.mousePressed(e);
-            int x = view.locateXY(e.getX());
-            int y = view.locateXY(e.getY());
-            System.out.println("network connected: " + isNetwork());
-
-            if (network != null) {
-                network.writeFill(x, y);
-            }
-        }
     }
 
     @Override
@@ -70,7 +47,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             case JOIN:
                 int n = JOptionPane.showConfirmDialog(null, "Join client?");
                 if (n == JOptionPane.YES_OPTION) {
-                    network.writeJoinAck();
+                    network.writeJoinAck(15);
                 } else {
                     network.writeJoinAck();
                 }
@@ -78,9 +55,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 break;
             case JOIN_ACK:
-                // JOptionPane -> Want to join? Yes, No
-                // yes return 1
-                // no return 0
+
                 new Thread(() ->{
                     int jc = popUpAns();
                     if(jc == 0){
@@ -104,11 +79,11 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 break;
             case FILL:
-                System.out.println("FILL");
-
+                System.out.println("FILL CASE");
+                network.writeFillAck(x,y,0);
                 break;
             case FILL_ACK:
-                network.writeFillAck(x,y,0);
+                System.out.println("FILL ACK");
                 break;
             case QUIT:
                 System.out.println("Quitting : One moment");
@@ -126,6 +101,23 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                 System.out.println("unknown");
                 break;
         }
+    }
+    class ClickAdapter extends MouseAdapter {
+
+        public void mousePressed(MouseEvent e) {
+            super.mousePressed(e);
+            int x = view.locateXY(e.getX());
+            int y = view.locateXY(e.getY());
+            System.out.println("network connected: " + isNetwork());
+
+            if (network != null) {
+                network.writeFill(x, y,isServer);
+            }
+        }
+    }
+
+    private void onlineGame(int x, int y){
+
     }
 
     private int popUpAns(){
@@ -150,7 +142,6 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
         network = new NetworkAdapter(socket);
         network.setMessageListener(this);
-        //network.writeJoinAck();
         network.receiveMessagesAsync();
 
     }
@@ -172,6 +163,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             new Thread(() -> {
                 try {
                     System.out.println("Server Starting");
+                    isServer = 1;
                     ServerSocket servSocket = new ServerSocket(NetworkGUI.getPortNumber());
                     Socket incoming = servSocket.accept();
                     pairAServer(incoming);
@@ -181,26 +173,22 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             }).start();
         }
 
+
     }
 
-    // client sends request
+    /**
+     * Client button listener
+     */
     class ClientListener implements ActionListener {
+
         @Override
         public void actionPerformed(ActionEvent e) {
             new Thread(() -> {
                 System.out.println("client starting");
                 try {
                     Socket socket = new Socket();
-
-                    //socket.connect(new InetSocketAddress("172.19.164.80", 8000), 5000);
                     socket.connect(new InetSocketAddress(NetworkGUI.getNameField(), NetworkGUI.getPortField2()), 5000);
-
-                    // Brians 172.19.160.100
-                    // ANDREA 172.19.164.80
-                    // mine: 172.19.164.228
-
-
-                    //172.19.160.82
+                    isServer = 2;
 
                     pairAsClient(socket);
 
@@ -213,11 +201,16 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
     static class OnlineListener implements ActionListener {
 
-        // ideas
         @Override
         public void actionPerformed(ActionEvent e) {
             NetworkGUI.createOnlinePanel();
         }
+    }
+
+    private void disconnectListener() {
+        network.close();
+        isNetwork();
+
     }
 
     private boolean isNetwork() {

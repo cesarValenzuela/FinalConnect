@@ -59,7 +59,7 @@ public class Controller {
         } catch (Exception ex1) {
             System.out.println("TIE");
         }
-        //gui.getBoardPanel().repaint();
+
         winHelper();
     }
 

@@ -8,16 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e3493d8b-70c5-43a9-8b5c-689b3f6fe3cf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$ClickAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$ClickAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$ClientListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$ClientListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$OnlineListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$OnlineListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$PlayListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$ServerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController$ServerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4ConnectFive/cs3331/hw5/NetworkGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cs3331/hw4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs3331/hw4/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,18 +23,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NetworkAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="601" column="31" selection-start-line="601" selection-start-column="31" selection-end-line="601" selection-end-column="31" />
+            <state relative-caret-position="-715">
+              <caret line="510" column="36" lean-forward="true" selection-start-line="510" selection-start-column="36" selection-end-line="510" selection-end-column="36" />
               <folding>
                 <element signature="e#17079#17080#0" expanded="true" />
                 <element signature="e#17119#17120#0" expanded="true" />
                 <element signature="e#17252#17253#0" expanded="true" />
                 <element signature="e#17301#17302#0" expanded="true" />
-                <element signature="e#20235#20236#0" expanded="true" />
-                <element signature="e#20319#20320#0" expanded="true" />
                 <element signature="e#20824#20825#0" expanded="true" />
                 <element signature="e#20873#20874#0" expanded="true" />
                 <element signature="e#20995#20996#0" expanded="true" />
@@ -50,28 +51,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetworkController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NetworkController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+            <state relative-caret-position="117">
+              <caret line="118" column="42" lean-forward="true" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
               <folding>
                 <element signature="docComment;class#NetworkController#0" />
                 <element signature="method#NetworkController#0;class#NetworkController#0" />
-                <element signature="e#752#806#0" />
-                <element signature="e#1102#1113#0" />
-                <element signature="method#disconnectListener#0;class#NetworkController#0" />
-                <element signature="e#2267#2306#0" />
+                <element signature="e#2443#2716#0" />
                 <element signature="e#3160#3198#0" />
+                <element signature="method#popUpAns#0;class#NetworkController#0" />
                 <element signature="method#writeNewPopUP#0;class#NetworkController#0" />
-                <element signature="class#ServerListener#0;class#NetworkController#0" />
-                <element signature="method#actionPerformed#0;class#ServerListener#0;class#NetworkController#0" />
-                <element signature="e#4167#4580#0" />
-                <element signature="class#ClientListener#0;class#NetworkController#0" />
-                <element signature="method#actionPerformed#0;class#ClientListener#0;class#NetworkController#0" />
-                <element signature="e#4784#5438#0" />
-                <element signature="e#5441#5465#0" />
+                <element signature="method#pairAServer#0;class#NetworkController#0" />
+                <element signature="method#pairAsClient#0;class#NetworkController#0" />
+                <element signature="docComment;class#ClientListener#0;class#NetworkController#0" />
                 <element signature="class#OnlineListener#0;class#NetworkController#0" />
+                <element signature="method#disconnectListener#0;class#NetworkController#0" />
                 <element signature="method#isNetwork#0;class#NetworkController#0" />
                 <element signature="method#main#0;class#NetworkController#0" />
               </folding>
@@ -82,10 +78,17 @@
       <file leaf-file-name="NetworkGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="118" selection-start-line="118" selection-end-line="119" />
+            <state relative-caret-position="304">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#NetworkGUI#0" />
+                <element signature="method#toolBar#0;class#NetworkGUI#0" />
+                <element signature="method#getPortField2#0;class#NetworkGUI#0" />
+                <element signature="method#getNameField#0;class#NetworkGUI#0" />
+                <element signature="method#getPortNumber#0;class#NetworkGUI#0" />
+                <element signature="method#makePlayerPanel#0;class#NetworkGUI#0" />
+                <element signature="method#createOnlinePanel#0;class#NetworkGUI#0" />
+                <element signature="method#makePeerPanel#0;class#NetworkGUI#0" />
               </folding>
             </state>
           </provider>
@@ -131,8 +134,8 @@
       <find>network</find>
       <find>QUIT</find>
       <find>quit</find>
-      <find>writefill</find>
       <find>writeNew</find>
+      <find>writefill</find>
     </findStrings>
     <replaceStrings>
       <replace>ConnectFiveGUI</replace>
@@ -184,12 +187,12 @@
         <option value="$PROJECT_DIR$/src/cs3331/HW4/EasyCompAI.java" />
         <option value="$PROJECT_DIR$/src/cs3331/hw4/Sound.java" />
         <option value="$PROJECT_DIR$/src/cs3331/hw4/BoardPanel.java" />
-        <option value="$PROJECT_DIR$/src/cs3331/hw4/Controller.java" />
         <option value="$PROJECT_DIR$/src/cs3331/hw4/Board.java" />
         <option value="$PROJECT_DIR$/src/cs3331/hw4/ConnectFive.java" />
-        <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java" />
-        <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java" />
         <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw4/Controller.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java" />
       </list>
     </option>
   </component>
@@ -203,7 +206,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1088" />
   </component>
@@ -265,7 +268,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="writeFillAck&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFillAck&#10;popup&#9;PSI&#9;JAVA://cs3331.hw5.NetworkController#writeNewPopUP&#10;playLi&#9;PSI&#9;JAVA://cs3331.hw4.Controller.PlayListener&#10;Join&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter.MessageType#JOIN_ACK&#10;writeMsg&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeMsg&#10;writeJoinAck&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeJoinAck&#10;writefill&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFill&#10;clickAd&#9;PSI&#9;JAVA://cs3331.hw4.Controller.ClickAdapter&#10;drawBo&#9;PSI&#9;JAVA://cs3331.hw4.BoardPanel#drawBoard&#10;Invalid&#9;PSI&#9;JAVA://cs3331.hw4.Sound#playInvalidTileSound&#10;writeFill&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFill&#10;writejoi&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeJoin&#10;receivemess&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#receiveMessages&#10;sizere&#9;PSI&#9;JAVA://cs3331.hw4.Controller#sizerequest&#10;toolBar&#9;PSI&#9;JAVA://cs3331.hw4.ConnectFive#toolBar" />
+    <property name="SearchEverywhereHistoryKey" value="writeJoinA&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeJoinAck&#10;Hu&#9;PSI&#9;JAVA://cs3331.hw4.Controller#HumanVHuman&#10;writeFillAck&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFillAck&#10;popup&#9;PSI&#9;JAVA://cs3331.hw5.NetworkController#writeNewPopUP&#10;playLi&#9;PSI&#9;JAVA://cs3331.hw4.Controller.PlayListener&#10;Join&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter.MessageType#JOIN_ACK&#10;writeMsg&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeMsg&#10;writeJoinAck&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeJoinAck&#10;writefill&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFill&#10;clickAd&#9;PSI&#9;JAVA://cs3331.hw4.Controller.ClickAdapter&#10;drawBo&#9;PSI&#9;JAVA://cs3331.hw4.BoardPanel#drawBoard&#10;Invalid&#9;PSI&#9;JAVA://cs3331.hw4.Sound#playInvalidTileSound&#10;writeFill&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFill&#10;writejoi&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeJoin&#10;receivemess&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#receiveMessages&#10;sizere&#9;PSI&#9;JAVA://cs3331.hw4.Controller#sizerequest&#10;toolBar&#9;PSI&#9;JAVA://cs3331.hw4.ConnectFive#toolBar" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -431,7 +434,7 @@
       <workItem from="1532732305801" duration="14184000" />
       <workItem from="1532916336866" duration="4599000" />
       <workItem from="1532979680480" duration="38363000" />
-      <workItem from="1533152406305" duration="20600000" />
+      <workItem from="1533152406305" duration="24715000" />
     </task>
     <task id="LOCAL-00001" summary="Winnning sound and Error sound are added also basic template for the AI is included">
       <created>1532119721484</created>
@@ -573,11 +576,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533177004158</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fixed bugs">
+      <created>1533182444092</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1533182444092</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158440000" />
+    <option name="totallyTimeSpent" value="162555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -585,7 +595,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49934897" weight="0.15633424" />
+      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49934897" weight="0.15531336" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -598,14 +608,14 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49919486" visible="true" weight="0.14496644" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49919486" weight="0.2995839" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="6" sideWeight="0.50080514" side_tool="true" weight="0.32885906" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="right" id="Debug" order="9" sideWeight="0.49595687" visible="true" weight="0.3590604" />
+      <window_info anchor="right" id="Debug" order="9" sideWeight="0.49595687" weight="0.7115118" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
@@ -664,7 +674,8 @@
     <MESSAGE value="HW4 has been changed to hw4" />
     <MESSAGE value="Case: Close" />
     <MESSAGE value="host/client text field added" />
-    <option name="LAST_COMMIT_MESSAGE" value="host/client text field added" />
+    <MESSAGE value="fixed bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -676,12 +687,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="36" />
@@ -756,8 +761,6 @@
             <element signature="e#17119#17120#0" expanded="true" />
             <element signature="e#17252#17253#0" expanded="true" />
             <element signature="e#17301#17302#0" expanded="true" />
-            <element signature="e#20235#20236#0" expanded="true" />
-            <element signature="e#20319#20320#0" expanded="true" />
             <element signature="e#20824#20825#0" expanded="true" />
             <element signature="e#20873#20874#0" expanded="true" />
             <element signature="e#20995#20996#0" expanded="true" />
@@ -793,20 +796,15 @@
           <folding>
             <element signature="docComment;class#NetworkController#0" />
             <element signature="method#NetworkController#0;class#NetworkController#0" />
-            <element signature="e#752#806#0" />
-            <element signature="e#1102#1113#0" />
-            <element signature="method#disconnectListener#0;class#NetworkController#0" />
-            <element signature="e#2267#2306#0" />
+            <element signature="e#2443#2716#0" />
             <element signature="e#3160#3198#0" />
+            <element signature="method#popUpAns#0;class#NetworkController#0" />
             <element signature="method#writeNewPopUP#0;class#NetworkController#0" />
-            <element signature="class#ServerListener#0;class#NetworkController#0" />
-            <element signature="method#actionPerformed#0;class#ServerListener#0;class#NetworkController#0" />
-            <element signature="e#4167#4580#0" />
-            <element signature="class#ClientListener#0;class#NetworkController#0" />
-            <element signature="method#actionPerformed#0;class#ClientListener#0;class#NetworkController#0" />
-            <element signature="e#4784#5438#0" />
-            <element signature="e#5441#5465#0" />
+            <element signature="method#pairAServer#0;class#NetworkController#0" />
+            <element signature="method#pairAsClient#0;class#NetworkController#0" />
+            <element signature="docComment;class#ClientListener#0;class#NetworkController#0" />
             <element signature="class#OnlineListener#0;class#NetworkController#0" />
+            <element signature="method#disconnectListener#0;class#NetworkController#0" />
             <element signature="method#isNetwork#0;class#NetworkController#0" />
             <element signature="method#main#0;class#NetworkController#0" />
           </folding>
@@ -829,8 +827,6 @@
             <element signature="e#17119#17120#0" expanded="true" />
             <element signature="e#17252#17253#0" expanded="true" />
             <element signature="e#17301#17302#0" expanded="true" />
-            <element signature="e#20235#20236#0" expanded="true" />
-            <element signature="e#20319#20320#0" expanded="true" />
             <element signature="e#20824#20825#0" expanded="true" />
             <element signature="e#20873#20874#0" expanded="true" />
             <element signature="e#20995#20996#0" expanded="true" />
@@ -1092,13 +1088,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1131,58 +1120,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="118" selection-start-line="118" selection-end-line="119" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1026">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java">
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+        <state relative-caret-position="304">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
-            <element signature="docComment;class#NetworkController#0" />
-            <element signature="method#NetworkController#0;class#NetworkController#0" />
-            <element signature="e#752#806#0" />
-            <element signature="e#1102#1113#0" />
-            <element signature="method#disconnectListener#0;class#NetworkController#0" />
-            <element signature="e#2267#2306#0" />
-            <element signature="e#3160#3198#0" />
-            <element signature="method#writeNewPopUP#0;class#NetworkController#0" />
-            <element signature="class#ServerListener#0;class#NetworkController#0" />
-            <element signature="method#actionPerformed#0;class#ServerListener#0;class#NetworkController#0" />
-            <element signature="e#4167#4580#0" />
-            <element signature="class#ClientListener#0;class#NetworkController#0" />
-            <element signature="method#actionPerformed#0;class#ClientListener#0;class#NetworkController#0" />
-            <element signature="e#4784#5438#0" />
-            <element signature="e#5441#5465#0" />
-            <element signature="class#OnlineListener#0;class#NetworkController#0" />
-            <element signature="method#isNetwork#0;class#NetworkController#0" />
-            <element signature="method#main#0;class#NetworkController#0" />
+            <element signature="docComment;class#NetworkGUI#0" />
+            <element signature="method#toolBar#0;class#NetworkGUI#0" />
+            <element signature="method#getPortField2#0;class#NetworkGUI#0" />
+            <element signature="method#getNameField#0;class#NetworkGUI#0" />
+            <element signature="method#getPortNumber#0;class#NetworkGUI#0" />
+            <element signature="method#makePlayerPanel#0;class#NetworkGUI#0" />
+            <element signature="method#createOnlinePanel#0;class#NetworkGUI#0" />
+            <element signature="method#makePeerPanel#0;class#NetworkGUI#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="601" column="31" selection-start-line="601" selection-start-column="31" selection-end-line="601" selection-end-column="31" />
+        <state relative-caret-position="-715">
+          <caret line="510" column="36" lean-forward="true" selection-start-line="510" selection-start-column="36" selection-end-line="510" selection-end-column="36" />
           <folding>
             <element signature="e#17079#17080#0" expanded="true" />
             <element signature="e#17119#17120#0" expanded="true" />
             <element signature="e#17252#17253#0" expanded="true" />
             <element signature="e#17301#17302#0" expanded="true" />
-            <element signature="e#20235#20236#0" expanded="true" />
-            <element signature="e#20319#20320#0" expanded="true" />
             <element signature="e#20824#20825#0" expanded="true" />
             <element signature="e#20873#20874#0" expanded="true" />
             <element signature="e#20995#20996#0" expanded="true" />
             <element signature="e#21067#21068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="118" column="42" lean-forward="true" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
+          <folding>
+            <element signature="docComment;class#NetworkController#0" />
+            <element signature="method#NetworkController#0;class#NetworkController#0" />
+            <element signature="e#2443#2716#0" />
+            <element signature="e#3160#3198#0" />
+            <element signature="method#popUpAns#0;class#NetworkController#0" />
+            <element signature="method#writeNewPopUP#0;class#NetworkController#0" />
+            <element signature="method#pairAServer#0;class#NetworkController#0" />
+            <element signature="method#pairAsClient#0;class#NetworkController#0" />
+            <element signature="docComment;class#ClientListener#0;class#NetworkController#0" />
+            <element signature="class#OnlineListener#0;class#NetworkController#0" />
+            <element signature="method#disconnectListener#0;class#NetworkController#0" />
+            <element signature="method#isNetwork#0;class#NetworkController#0" />
+            <element signature="method#main#0;class#NetworkController#0" />
           </folding>
         </state>
       </provider>

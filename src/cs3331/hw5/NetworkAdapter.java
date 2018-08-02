@@ -588,8 +588,8 @@ public class NetworkAdapter {
      *
      * @see #writeFillAck(int, int, int)
      */
-    public void writeFill(int x, int y) {
-        writeMsg(String.format("%s%s,%s,%s", MessageType.FILL.header, x, y));
+    public void writeFill(int x, int y, int number) {
+        writeMsg(String.format("%s%s,%s,%s", MessageType.FILL.header, x, y, number));
     }
 
     /**
@@ -599,7 +599,7 @@ public class NetworkAdapter {
      * @param y 0-based row index of the square
      * @param number Filled-in number
      *
-     * @see #writeFill(int, int)
+     * @see #writeFill(int, int, int)
      */
     public void writeFillAck(int x, int y, int number) {
         writeMsg(String.format("%s%s,%s,%s", MessageType.FILL_ACK.header, x, y, number));
