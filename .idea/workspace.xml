@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="HW4ConnectFive:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3493d8b-70c5-43a9-8b5c-689b3f6fe3cf" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="NetworkAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10868">
+              <caret line="605" column="5" selection-start-line="605" selection-start-column="5" selection-end-line="605" selection-end-column="5" />
+              <folding>
+                <element signature="e#17252#17253#0" expanded="true" />
+                <element signature="e#17301#17302#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#NetworkController#0" />
+                <element signature="class#ClickAdapter#0;class#NetworkController#0" />
+                <element signature="method#pairAServer#0;class#NetworkController#0" />
+                <element signature="method#pairAsClient#0;class#NetworkController#0" />
+                <element signature="method#isNetwork#0;class#NetworkController#0" />
+                <element signature="method#main#0;class#NetworkController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkGUI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="912">
+              <caret line="52" column="63" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectFive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/ConnectFive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+              <folding>
+                <element signature="docComment;class#ConnectFive#0" />
+                <element signature="docComment;field#IMAGE_DIR#0;class#ConnectFive#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2717">
+              <caret line="149" column="34" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
+              <folding>
+                <element signature="e#1351#1352#0" expanded="true" />
+                <element signature="e#1382#1383#0" expanded="true" />
+                <element signature="e#2033#2034#0" expanded="true" />
+                <element signature="e#2060#2061#0" expanded="true" />
+                <element signature="e#4352#4353#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dispose()</find>
+      <find>PlayLis</find>
+      <find>PlayListener()</find>
+      <find>playListener</find>
+      <find>isValid</find>
+      <find>ez</find>
+      <find>medium</find>
+      <find>HumanVsAI</find>
+      <find>setP2</find>
+      <find>getBoarde3</find>
+      <find>setC</find>
+      <find>menuBar()</find>
+      <find>HW4</find>
+      <find>sizeRequest2</find>
+      <find>'j'</find>
+      <find>sizere</find>
+      <find>networkButtonOn</find>
+      <find>PlayInvalidTileSound</find>
+      <find>true</find>
+      <find>sizerequest</find>
+      <find>gui.getBoardPanel().drawBoard();</find>
+      <find>repaint</find>
+      <find>drawBoard</find>
+      <find>host</find>
+      <find>writenew</find>
+      <find>writeFill</find>
+      <find>writeMsg</find>
+      <find>messages.take</find>
+      <find>take</find>
+      <find>network</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ConnectFiveGUI</replace>
+      <replace>hw4</replace>
+      <replace>p1.</replace>
+      <replace>serverButton</replace>
+      <replace>sizeRequest</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="SuperCoolPreAIStuff" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/cs3331/CompPlayer.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HardCompAI.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/PlayerWonException.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/ConnectFiveGUI.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Sound.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Controler.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Board.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/ConnectFive.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/MedCompAI.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/EasyCompAI.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Player.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/BoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Human.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Computer.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Controller.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/Square.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW5/NetworkAdapter.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/Board.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/MedCompAI.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/BoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/Computer.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/Controller.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/Human.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/InValidDiskPositionException.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/Player.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/Sound.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/Square.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/ConnectFive.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/HW4/EasyCompAI.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw4/Sound.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw4/BoardPanel.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw4/Controller.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw4/Board.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw4/ConnectFive.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java" />
+        <option value="$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1088" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HW4ConnectFive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4ConnectFive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4ConnectFive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4ConnectFive" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4ConnectFive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4ConnectFive" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4ConnectFive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4ConnectFive" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs3331" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4ConnectFive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4ConnectFive" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs3331" type="462c0819:PsiDirectoryNode" />
+              <item name="hw5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4ConnectFive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4ConnectFive" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="playLi&#9;PSI&#9;JAVA://cs3331.hw4.Controller.PlayListener&#10;Join&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter.MessageType#JOIN_ACK&#10;writeMsg&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeMsg&#10;writeJoinAck&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeJoinAck&#10;writefill&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFill&#10;clickAd&#9;PSI&#9;JAVA://cs3331.hw4.Controller.ClickAdapter&#10;drawBo&#9;PSI&#9;JAVA://cs3331.hw4.BoardPanel#drawBoard&#10;Invalid&#9;PSI&#9;JAVA://cs3331.hw4.Sound#playInvalidTileSound&#10;writeFill&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeFill&#10;writejoi&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#writeJoin&#10;receivemess&#9;PSI&#9;JAVA://cs3331.hw5.NetworkAdapter#receiveMessages&#10;sizere&#9;PSI&#9;JAVA://cs3331.hw4.Controller#sizerequest&#10;toolBar&#9;PSI&#9;JAVA://cs3331.hw4.ConnectFive#toolBar" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cs3331" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kaise\Desktop\HW4ConnectFive\src\image" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.2">
+    <configuration name="1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="cs3331.hw5.NetworkController" />
+      <module name="HW4ConnectFive" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs3331.hw5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="cs3331.hw5.NetworkController" />
+      <module name="HW4ConnectFive" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ConnectFive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cs3331.HW4.ConnectFive" />
+      <module name="HW4ConnectFive" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs3331.hw4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Controler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cs3331.Controler" />
+      <module name="HW4ConnectFive" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs3331.hw4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Controller (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cs3331.hw4.Controller" />
+      <module name="HW4ConnectFive" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs3331.hw4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cs3331.HW4.Controller" />
+      <module name="HW4ConnectFive" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cs3331.hw4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Application.2" />
+      <item itemvalue="Application.ConnectFive" />
+      <item itemvalue="Application.Controler" />
+      <item itemvalue="Application.Controller" />
+      <item itemvalue="Application.Controller (1)" />
+      <item itemvalue="Application.1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.1" />
+        <item itemvalue="Application.Controller (1)" />
+        <item itemvalue="Application.Controller" />
+        <item itemvalue="Application.ConnectFive" />
+        <item itemvalue="Application.Controler" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3493d8b-70c5-43a9-8b5c-689b3f6fe3cf" name="Default" comment="" />
+      <created>1532041476338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532041476338</updated>
+      <workItem from="1532041477774" duration="10053000" />
+      <workItem from="1532203431477" duration="68504000" />
+      <workItem from="1532728381106" duration="2137000" />
+      <workItem from="1532732305801" duration="14184000" />
+      <workItem from="1532916336866" duration="4599000" />
+      <workItem from="1532979680480" duration="38363000" />
+      <workItem from="1533152406305" duration="10441000" />
+    </task>
+    <task id="LOCAL-00001" summary="Winnning sound and Error sound are added also basic template for the AI is included">
+      <created>1532119721484</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532119721484</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Winnning sound and Error sound are added also basic template for the AI is included">
+      <created>1532119890634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532119890634</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Winnning sound and Error sound are added also basic template for the AI is included">
+      <created>1532201603379</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532201603379</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Winnning sound and Error sound are added also basic template for the AI is included">
+      <created>1532206122581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532206122581</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Color Fixer has been fixed and now both p1 and p2 can choose their colors">
+      <created>1532308903332</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532308903332</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Color Fixer has been fixed and now both p1 and p2 can choose their colors">
+      <created>1532309523430</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532309523430</updated>
+    </task>
+    <task id="LOCAL-00007" summary="I can't even">
+      <created>1532318396985</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532318396985</updated>
+    </task>
+    <task id="LOCAL-00008" summary="I can't even im so done">
+      <created>1532321100231</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1532321100231</updated>
+    </task>
+    <task id="LOCAL-00009" summary="I can't even im so done">
+      <created>1532321989793</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1532321989793</updated>
+    </task>
+    <task id="LOCAL-00010" summary="I can't even im so done really reall done now">
+      <created>1532324320580</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1532324320580</updated>
+    </task>
+    <task id="LOCAL-00011" summary="I can't even im so done really reall done now">
+      <created>1532325197065</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532325197065</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Its all a mess now">
+      <created>1532474170684</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532474170684</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Its all a mess now but its getting better kind of">
+      <created>1532657573245</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1532657573245</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Easy Works really well now a try catch was implemented woo hoo">
+      <created>1532658457448</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1532658457448</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Easy Works really well now a try catch was implemented woo hoo">
+      <created>1532658704914</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1532658704914</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Easy Works really well now a try catch was implemented woo hoo">
+      <created>1532722503739</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1532722503739</updated>
+    </task>
+    <task id="LOCAL-00017" summary="HW4 has been changed to hw4">
+      <created>1532723612879</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1532723612879</updated>
+    </task>
+    <task id="LOCAL-00018" summary="HW4 has been changed to hw4">
+      <created>1532724094649</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1532724094649</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="148281000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49934897" weight="0.15633424" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50065106" side_tool="true" weight="0.32965517" />
+      <window_info anchor="right" x="0" y="0" width="337" height="678" id="Documentation" order="10" sideWeight="0.50673854" side_tool="true" weight="0.518792" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32931727" />
+      <window_info active="true" anchor="bottom" x="53" y="125" width="768" height="701" id="Run" order="1" sideWeight="0.49326146" visible="true" weight="0.2722372" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="0" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49919486" visible="true" weight="0.033557046" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="6" sideWeight="0.50080514" side_tool="true" weight="0.32885906" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="right" id="Debug" order="9" sideWeight="0.49595687" weight="0.37248322" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.25167337" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info active="true" anchor="bottom" x="53" y="125" width="768" height="701" id="Run" order="1" sideWeight="0.49326146" visible="true" weight="0.260218" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.25167337" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49919486" weight="0.5503356" />
+      <window_info id="Structure" order="6" sideWeight="0.50080514" side_tool="true" weight="0.32885906" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info id="UI Designer" order="1" />
+      <window_info anchor="right" id="Debug" order="9" sideWeight="0.49595687" weight="0.37248322" />
+      <window_info anchor="right" x="0" y="0" width="337" height="678" id="Documentation" order="10" sideWeight="0.50673854" side_tool="true" weight="0.518792" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50065106" side_tool="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32931727" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49934897" weight="0.15633424" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Winnning sound and Error sound are added also basic template for the AI is included" />
+    <MESSAGE value="Color Fixer has been fixed and now both p1 and p2 can choose their colors" />
+    <MESSAGE value="I can't even" />
+    <MESSAGE value="I can't even im so done" />
+    <MESSAGE value="I can't even im so done really reall done now" />
+    <MESSAGE value="Its all a mess now" />
+    <MESSAGE value="Its all a mess now but its getting better" />
+    <MESSAGE value="Its all a mess now but its getting better kind of" />
+    <MESSAGE value="Easy Works really well now a try catch was implemented woo hoo" />
+    <MESSAGE value="HW4 has been changed to hw4" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW4 has been changed to hw4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/cs3331/hw4/Square.java</url>
+          <line>9</line>
+          <properties class="cs3331.hw4.Square" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="34" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="currY" language="JAVA" />
+        <watch expression="currX" language="JAVA" />
+        <watch expression="((BoardPanel)((ConnectFive)((Controller)((EasyListener)this).this$0).gui).boardPanel).p2" language="JAVA" custom="cs3331.HW4.Controller.EasyListener,cs3331.HW4.Controller,cs3331.HW4.ConnectFive,cs3331.HW4.BoardPanel" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>((BoardPanel)((ConnectFive)((Controller)((EasyListener)this).this$0).gui).boardPanel).p2</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>cs3331.HW4.Controller.EasyListener,cs3331.HW4.Controller,cs3331.HW4.ConnectFive,cs3331.HW4.BoardPanel</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>currX</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>currY</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>boardPanel.getColorp2</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>boardPanel.colorP2</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>boardPanel.colorP1</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>boardPanel.</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>boardPanel.colorP1;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="162" column="28" lean-forward="true" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+          <folding>
+            <element signature="e#17252#17253#0" expanded="true" />
+            <element signature="e#17301#17302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1444">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="55" column="27" lean-forward="true" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#NetworkController#0" />
+            <element signature="class#ClickAdapter#0;class#NetworkController#0" />
+            <element signature="method#pairAServer#0;class#NetworkController#0" />
+            <element signature="method#pairAsClient#0;class#NetworkController#0" />
+            <element signature="method#isNetwork#0;class#NetworkController#0" />
+            <element signature="method#main#0;class#NetworkController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6745">
+          <caret line="574" column="16" selection-start-line="574" selection-start-column="16" selection-end-line="574" selection-end-column="16" />
+          <folding>
+            <element signature="e#17252#17253#0" expanded="true" />
+            <element signature="e#17301#17302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="122" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/ConnectFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#ConnectFive#0" />
+            <element signature="docComment;field#IMAGE_DIR#0;class#ConnectFive#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/ConnectFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#ConnectFive#0" />
+            <element signature="docComment;field#IMAGE_DIR#0;class#ConnectFive#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2318">
+          <caret line="206" column="38" selection-start-line="206" selection-start-column="38" selection-end-line="206" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/ConnectFiveGUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/CompPlayer.java" />
+    <entry file="file://$PROJECT_DIR$/src/Sound/click (1).wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sound/errorSound.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sound/winSound.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW4ConnectFive.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/HardCompAI.java" />
+    <entry file="file://$PROJECT_DIR$/src/cs3331/PlayerWonException.java" />
+    <entry file="file://$PROJECT_DIR$/src/cs3331/ConnectFiveGUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/cs3331/Controler.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/CompPlayer.java" />
+    <entry file="file://$PROJECT_DIR$/src/cs3331/HW4/package-info.java" />
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/MedCompAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/InValidDiskPositionException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1283#1284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/EasyCompAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2717">
+          <caret line="149" column="34" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
+          <folding>
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2060#2061#0" expanded="true" />
+            <element signature="e#4352#4353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/ConnectFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+          <folding>
+            <element signature="docComment;class#ConnectFive#0" />
+            <element signature="docComment;field#IMAGE_DIR#0;class#ConnectFive#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#NetworkController#0" />
+            <element signature="class#ClickAdapter#0;class#NetworkController#0" />
+            <element signature="method#pairAServer#0;class#NetworkController#0" />
+            <element signature="method#pairAsClient#0;class#NetworkController#0" />
+            <element signature="method#isNetwork#0;class#NetworkController#0" />
+            <element signature="method#main#0;class#NetworkController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10868">
+          <caret line="605" column="5" selection-start-line="605" selection-start-column="5" selection-end-line="605" selection-end-column="5" />
+          <folding>
+            <element signature="e#17252#17253#0" expanded="true" />
+            <element signature="e#17301#17302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw4/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs3331/hw5/NetworkGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="52" column="63" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>HW4ConnectFive:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>@types/json-editor</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>HW4ConnectFive</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
