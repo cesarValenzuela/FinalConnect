@@ -509,7 +509,7 @@ public class NetworkAdapter {
      * Write an "accepted" join_ack message asynchronously.
      *
      * @param size Size of the board
-     * @param  //Non-empty squares of the board. Each square is represented
+     * @param  /Non-empty squares of the board. Each square is represented
      *   as a tuple of (x, y, v, f), where x and y are 0-based column/row indexes,
      *   v is a non-zero number, and f is a flag indicating whether the number
      *   is given (1) or entered by the user (0).

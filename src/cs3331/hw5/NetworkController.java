@@ -64,20 +64,13 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         }
     }
 
-    static class PlayListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            sizeRequest("Start new game?");
-        }
-    }
-
-
     @Override
     public void messageReceived(NetworkAdapter.MessageType type, int x, int y, int z, int[] others) {
         switch (type) {
             case JOIN:
                 int n = JOptionPane.showConfirmDialog(null, "Join client?");
                 if (n == JOptionPane.YES_OPTION) {
-                    network.writeJoinAck(model.size());
+                    network.writeJoinAck();
                 } else {
                     network.writeJoinAck();
                 }
@@ -88,12 +81,15 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                 // JOptionPane -> Want to join? Yes, No
                 // yes return 1
                 // no return 0
-                if(popUpAns() == 0){
-                    System.out.println("Yes, game joined");
-                } else{
-                    System.out.println("Game declined");
-                }
-                //sendStuff();
+                new Thread(() ->{
+                    int jc = popUpAns();
+                    if(jc == 0){
+                        System.out.println("Yes, game joined");
+                    } else{
+                        System.out.println("Game declined");
+                    }
+                }).start();
+
 
                 break;
             case NEW:
@@ -109,9 +105,10 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                 break;
             case FILL:
                 System.out.println("FILL");
+
                 break;
             case FILL_ACK:
-
+                network.writeFillAck(x,y,0);
                 break;
             case QUIT:
                 System.out.println("Quitting : One moment");
@@ -121,9 +118,9 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 break;
             case CLOSE:
-                //System.out.println("Connection Severed.");
-                //disconnectListener();
-                network.writeQuit();
+                System.out.println("Connection Severed.");
+                disconnectListener();
+
                 break;
             case UNKNOWN:
                 System.out.println("unknown");
@@ -132,13 +129,14 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
     }
 
     private int popUpAns(){
-        int reponse = JOptionPane.showConfirmDialog(null, "Hey Someone wants a new board");
+        int reponse = JOptionPane.showConfirmDialog(null, "GAME VERIFICATION");
         if(reponse == JOptionPane.YES_OPTION){
             return 0;
         }else {
             return 1;
         }
     }
+
     private void writeNewPopUP() {
         int respon = JOptionPane.showConfirmDialog(null, "Hey Someone wants a new board");
         if (respon == JOptionPane.YES_OPTION)
@@ -153,8 +151,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         network = new NetworkAdapter(socket);
         network.setMessageListener(this);
         //network.writeJoinAck();
-        network.receiveMessages();
-        network.writeQuit();
+        network.receiveMessagesAsync();
 
     }
 
