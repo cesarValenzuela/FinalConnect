@@ -111,10 +111,16 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 break;
             case QUIT:
-
+                System.out.println("Quitting : One moment");
                 break;
             case CLOSE:
+                System.out.println("closing connection");
+                try{
+                    network.socket().close();
 
+                }catch(Exception e){
+                    System.out.println("IO PROB");
+                }
                 break;
             case UNKNOWN:
                 System.out.println("unknown");
@@ -182,6 +188,8 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                     // ANDREA 172.19.164.80
                     // mine: 172.19.164.228
 
+
+                    //172.19.160.82
 
                     pairAsClient(socket);
 
