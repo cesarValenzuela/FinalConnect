@@ -111,7 +111,7 @@ public class NetworkGUI extends ConnectFive {
         ipField.setEditable(false);
 
         JLabel portNum = new JLabel( "Port number: " );
-        portField = new JTextField(12);
+        portField = new JTextField("8000",12);
 
         panel.setBorder( BorderFactory.createTitledBorder( "Player" ) );
         panel.setLayout( new GridLayout( 4, 2, 5, 5 ) );
@@ -147,9 +147,9 @@ public class NetworkGUI extends ConnectFive {
         JPanel panel = new JPanel();
         JLabel hostName = new JLabel( "Host name/IP: " );
 
-        nameField = new JTextField( 12 );
+        nameField = new JTextField( "127.0.0.1",12 );
         JLabel portNum = new JLabel( "Port number: " );
-        portField2 = new JTextField( 12 );
+        portField2 = new JTextField( "8000",12 );
 
         panel.setBorder( BorderFactory.createTitledBorder( "Peer" ) );
         panel.setLayout( new GridLayout( 3, 2, 5, 5 ) );

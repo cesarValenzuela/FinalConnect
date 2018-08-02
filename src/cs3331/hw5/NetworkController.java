@@ -22,7 +22,7 @@ import java.net.Socket;
  */
 public class NetworkController extends Controller implements NetworkAdapter.MessageListener {
 
-    public  NetworkGUI view;
+    public NetworkGUI view;
     private Board model;
     private NetworkAdapter network;
 
@@ -41,9 +41,14 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         //view.addS
         //view.addPlayListener(new PlayListener());
         //view.addPlayListener(this::playPerform);
+        view.addDisconnectListener(e -> disconnectListener());
     }
 
+    private void disconnectListener() {
+            network.close();
+            isNetwork();
 
+    }
 
     class ClickAdapter extends MouseAdapter {
         public void mousePressed(MouseEvent e) {
@@ -53,7 +58,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             int y = view.locateXY(e.getY());
             System.out.println("network connected: " + isNetwork());
 
-            if(network != null){
+            if (network != null) {
                 network.writeFill(x, y);
             }
         }
@@ -83,7 +88,11 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                 // JOptionPane -> Want to join? Yes, No
                 // yes return 1
                 // no return 0
-                System.out.println("RECIEVED JOIN--ACK");
+                if(popUpAns() == 0){
+                    System.out.println("Yes, game joined");
+                } else{
+                    System.out.println("Game declined");
+                }
                 //sendStuff();
 
                 break;
@@ -99,12 +108,6 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 break;
             case FILL:
-                try {
-
-                    model.addDisc(x, y, 1);
-                } catch (InValidDiskPositionException e) {
-                    System.out.println("oops");
-                }
                 System.out.println("FILL");
                 break;
             case FILL_ACK:
@@ -112,15 +115,15 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                 break;
             case QUIT:
                 System.out.println("Quitting : One moment");
+//                if(popUpAns() == 0){
+//                    System.exit(-1);
+//                }
+
                 break;
             case CLOSE:
-                System.out.println("closing connection");
-                try{
-                    network.socket().close();
-
-                }catch(Exception e){
-                    System.out.println("IO PROB");
-                }
+                //System.out.println("Connection Severed.");
+                //disconnectListener();
+                network.writeQuit();
                 break;
             case UNKNOWN:
                 System.out.println("unknown");
@@ -128,11 +131,21 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         }
     }
 
+    private int popUpAns(){
+        int reponse = JOptionPane.showConfirmDialog(null, "Hey Someone wants a new board");
+        if(reponse == JOptionPane.YES_OPTION){
+            return 0;
+        }else {
+            return 1;
+        }
+    }
     private void writeNewPopUP() {
         int respon = JOptionPane.showConfirmDialog(null, "Hey Someone wants a new board");
         if (respon == JOptionPane.YES_OPTION)
             network.writeNewAck(true);
-        else{network.writeNewAck(false);}
+        else {
+            network.writeNewAck(false);
+        }
     }
 
     private void pairAServer(Socket socket) {
@@ -141,6 +154,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         network.setMessageListener(this);
         //network.writeJoinAck();
         network.receiveMessages();
+        network.writeQuit();
 
     }
 
@@ -182,7 +196,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                     Socket socket = new Socket();
 
                     //socket.connect(new InetSocketAddress("172.19.164.80", 8000), 5000);
-                    socket.connect(new InetSocketAddress(NetworkGUI.getNameField(),NetworkGUI.getPortField2()), 5000);
+                    socket.connect(new InetSocketAddress(NetworkGUI.getNameField(), NetworkGUI.getPortField2()), 5000);
 
                     // Brians 172.19.160.100
                     // ANDREA 172.19.164.80
