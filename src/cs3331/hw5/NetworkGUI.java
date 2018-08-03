@@ -4,11 +4,7 @@ import cs3331.hw4.ConnectFive;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.InetSocketAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 /**
  * Author: Cesar Valenzuela
@@ -22,12 +18,14 @@ public class NetworkGUI extends ConnectFive {
 
 
     private JButton onlineButton;
-    private static JButton host = new JButton("HOST");
-    private static JButton connectButton = new JButton( "connect" );
-    private static JButton disconnectButton = new JButton( "disconnect" );
-    private static JTextField portField;
-    private static JTextField nameField;
-    private static JTextField portField2;
+    private JButton host = new JButton("HOST");
+    private JButton connectButton = new JButton("connect");
+    private JButton disconnectButton = new JButton("disconnect");
+    private JButton playWithFriend;
+
+    private JTextField portField;
+    private JTextField nameField;
+    private JTextField portField2;
 
 
     NetworkGUI() {
@@ -44,104 +42,121 @@ public class NetworkGUI extends ConnectFive {
         onlineButton = new JButton(createImageIcon("wifi-red.png"));
         onlineButton.setToolTipText("Play against Online Player");
 
+
+        playWithFriend = new JButton("playWithFriend");
+        playWithFriend.setToolTipText("ok");
+
         toolBar.add(onlineButton);
+        toolBar.add(playWithFriend);
         return toolBar;
     }
 
-    protected static int getPortField2(){
+    protected int getPortField2() {
         int portNum = Integer.parseInt(portField2.getText());
-        System.out.println(portNum + " this is portNum 2");
+        System.out.println("Client Port Num: " + portNum);
         return portNum;
     }
 
-    protected static String getNameField(){
+    protected String getNameField() {
         String ip = nameField.getText();
         return ip;
     }
 
-    protected static int getPortNumber(){
+    protected int getPortNumber() {
         int portNum = Integer.parseInt(portField.getText());
-        System.out.println(portNum + "this is portNUm");
+        System.out.println("Server Port Num: " + portNum);
         return portNum;
     }
 
-    protected static JPanel makePlayerPanel() {
+    protected JPanel makePlayerPanel() {
         JPanel panel = new JPanel();
 
-        JLabel ipNumber = new JLabel( "IP number: " );
+        JLabel ipNumber = new JLabel("IP number: ");
 
         JTextField ipField = new JTextField("localhost");
         ipField.setEditable(false);
 
-        JLabel portNum = new JLabel( "Port number: " );
-        portField = new JTextField("8000",12);
+        JLabel portNum = new JLabel("Port number: ");
+        portField = new JTextField("8000", 12);
 
-        panel.setBorder( BorderFactory.createTitledBorder( "Player" ) );
-        panel.setLayout( new GridLayout( 4, 2, 5, 5 ) );
-        panel.add( ipNumber );
-        panel.add( ipField );
-        panel.add( portNum );
-        panel.add( portField );
-        panel.add( host );
-        panel.setVisible( true );
+        panel.setBorder(BorderFactory.createTitledBorder("Player"));
+        panel.setLayout(new GridLayout(4, 2, 5, 5));
+        panel.add(ipNumber);
+        panel.add(ipField);
+        panel.add(portNum);
+        panel.add(portField);
+        panel.add(host);
+        panel.setVisible(true);
 
         return panel;
     }
 
-    public static void createOnlinePanel() {
-        JFrame f = new JFrame( "Connection" );
+    public void createOnlinePanel() {
+        JFrame f = new JFrame("Connection");
         JPanel panel = new JPanel();
-        panel.setSize( 400,400 );
-        f.setResizable( false );
-        f.add( panel );
-        f.setSize( 400, 400 );
-        f.setLayout( null );
-        f.setVisible( true );
+        panel.setSize(400, 400);
+        f.setResizable(false);
+        f.add(panel);
+        f.setSize(400, 400);
+        f.setLayout(null);
+        f.setVisible(true);
 
         JPanel playerPanel = makePlayerPanel();
-        panel.add( playerPanel );
+        panel.add(playerPanel);
 
         JPanel peerPanel = makePeerPanel();
-        panel.add( peerPanel );
+        panel.add(peerPanel);
     }
 
-    protected static JPanel makePeerPanel() {
+    protected JPanel makePeerPanel() {
         JPanel panel = new JPanel();
-        JLabel hostName = new JLabel( "Host name/IP: " );
+        JLabel hostName = new JLabel("Host name/IP: ");
 
-        nameField = new JTextField( "127.0.0.1",12 );
-        JLabel portNum = new JLabel( "Port number: " );
-        portField2 = new JTextField( "8000",12 );
+        nameField = new JTextField("127.0.0.1", 12);
+        JLabel portNum = new JLabel("Port number: ");
+        portField2 = new JTextField("8000", 12);
 
-        panel.setBorder( BorderFactory.createTitledBorder( "Peer" ) );
-        panel.setLayout( new GridLayout( 3, 2, 5, 5 ) );
-        panel.add( hostName );
-        panel.add( nameField );
-        panel.add( portNum );
-        panel.add( portField2 );
-        panel.add( connectButton );
-        panel.add( disconnectButton );
-        panel.setVisible( true );
+        panel.setBorder(BorderFactory.createTitledBorder("Peer"));
+        panel.setLayout(new GridLayout(3, 2, 5, 5));
+        panel.add(hostName);
+        panel.add(nameField);
+        panel.add(portNum);
+        panel.add(portField2);
+        panel.add(connectButton);
+        panel.add(disconnectButton);
+        panel.setVisible(true);
 
         return panel;
 
     }
 
-    void addHostButtonListener(ActionListener abe) {
-        host.addActionListener(abe);
+
+    JButton getPlayWithFriend() {
+        return getPlayWithFriend();
     }
 
-    void addOnlineButtonListener(ActionListener abc){
-        onlineButton.addActionListener(abc);
+    void setVisiblePlayWithFriendVisibility(boolean visibility){
+        playWithFriend.setVisible(visibility);
     }
 
-    void addConnectListener(ActionListener actionListener) {
-        connectButton.addActionListener( actionListener );
+    void addHostButtonListener(ActionListener e) {
+        host.addActionListener(e);
     }
 
-    void addDisconnectListener(ActionListener actionListener) {
-        disconnectButton.addActionListener( actionListener );
+    void addOnlineButtonListener(ActionListener e) {
+        onlineButton.addActionListener(e);
     }
 
+    void addConnectListener(ActionListener e) {
+        connectButton.addActionListener(e);
+    }
+
+    void addDisconnectListener(ActionListener e) {
+        disconnectButton.addActionListener(e);
+    }
+
+    void addPlayWithFriendListener(ActionListener actionListener){
+        playWithFriend.addActionListener(actionListener);
+    }
 }
 

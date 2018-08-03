@@ -307,6 +307,7 @@ public class NetworkAdapter {
             out.close();
             in.close();
             messageWriter.stop();
+            socket.close();
         } catch (Exception e) {
         }
     }
@@ -516,18 +517,7 @@ public class NetworkAdapter {
      *
      * @see #writeJoin()
      */
-//    public void writeJoinAck(int size, Square[][] squares) {
-//        //(int size, int... squares)
-//        StringBuilder builder = new StringBuilder(MessageType.JOIN_ACK.header);
-//        builder.append("1,");
-//        builder.append(size);
-//        //for(int v: squares){
-//        for (Square[] v: squares) {
-//            builder.append(",");
-//            builder.append(v);
-//        }
-//        writeMsg(builder.toString());
-//    }
+
     public void writeJoinAck(int size) {
         //(int size, int... squares)
         StringBuilder builder = new StringBuilder(MessageType.JOIN_ACK.header);

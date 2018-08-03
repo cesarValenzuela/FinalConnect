@@ -21,12 +21,14 @@ import java.awt.event.*;
  */
 public class Controller {
 
-    private static Board model;
-    private static ConnectFive gui;
+    private Board model;
+    private ConnectFive gui;
+    protected Sound sound;
 
     protected Controller(Board model, ConnectFive gui) {
         this.model = model;
         this.gui = gui;
+        sound = new Sound();
 
         //add listeners to GUI
         gui.addPlayListener(new PlayListener());
@@ -55,28 +57,27 @@ public class Controller {
             }
         } catch (InValidDiskPositionException ex) {
             gui.getMessage().setText("INVALID PLACEMENT");
-            Sound.playInvalidTileSound();
+            sound.playInvalidTileSound();
         } catch (Exception ex1) {
-            System.out.println("TIE");
+            // System.out.println("TIE");
         }
-
         winHelper();
     }
 
     public void HumanVsAI(int x, int y, Board board) {
         try {
             gui.getMessage().setText("Player 2's turn");
-            System.out.println("HUMAN MOVE");
+            //System.out.println("HUMAN MOVE");
             gui.getBoardPanel().getP1().setMove(x, y);
             gui.getBoardPanel().getBoard().addDisc(gui.getBoardPanel().getP1().currX - 1, gui.getBoardPanel().getP1().currY - 1, 1);
-            System.out.println("AI MOVE");
-            gui.getBoardPanel().getP2().setMove(x, y, board);
-            gui.getBoardPanel().getBoard().addDisc(gui.getBoardPanel().getP2().currX, gui.getBoardPanel().getP2().currY, 2);
+            //System.out.println("AI MOVE");
+            gui.getBoardPanel().getP2().setMove(x,y,board);
+            gui.getBoardPanel().getBoard().addDisc(gui.getBoardPanel().getP2().currX, gui.getBoardPanel().getP2().currY,2);
 
         } catch (InValidDiskPositionException ex1) {
             gui.getMessage().setText("INVALID PLACEMENT");
             new Thread(() -> {
-                Sound.playInvalidTileSound();
+                sound.playInvalidTileSound();
             }).start();
         } catch (Exception e) {
             e.printStackTrace();
@@ -94,122 +95,20 @@ public class Controller {
             }
             //gui.getBoardPanel().setVisible(false);
             new Thread(() -> {
-                Sound.playWinSound();
+                sound.playWinSound();
             }).start();
-            setNewBoard(gui.getBoardPanel().getBoard().size());
-        }
-    }
-
-
-    /**
-     * Action Listener for the Play Button on the Tool Bar
-     */
-    public static class PlayListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            sizeRequest("Start new game?");
+            setNewBoard(gui.getBoardPanel().getBoard().size(),gui.getBoardPanel().getP2().playerType,gui.getBoardPanel().getColorP1(),gui.getBoardPanel().getColorP2());
         }
     }
 
     /**
-     * Action Listener for the Paintbrush Button
+     * Dialog pops up asking if the user wants to play against AI
      */
-    static class PaintListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            gui.colorChooser();
-        }
-    }
-
-    /**
-     * Action Listener for easy AI button
-     */
-    static class EasyListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            Controller.sizeRequest2("Start a new game against easyAI?", 'e');
-        }
-    }
-
-    protected static void easyListenerHelper(int boardSize) {
-        System.out.println("ez");
-        Color p1ColorTmp = gui.getBoardPanel().getColorP1();
-        setNewBoard(boardSize);
-        gui.getBoardPanel().setColorP1(p1ColorTmp);
-        gui.getBoardPanel().getP1().setTileColor(p1ColorTmp);
-        gui.getBoardPanel().setColorP2(Color.BLACK);
-
-    }
-
-    static void setNewBoard(int boardSize) {
-        gui.getBoardPanel().setBoard(new Board(boardSize));
-        gui.setSquareSize(boardSize);
-        gui.getBoardPanel().setP2('e');
-        gui.getBoardPanel().setGrid(boardSize);
-        gui.getBoardPanel().drawBoard();
-        gui.getBoardPanel().setVisible(true);
-    }
-
-    protected static void MediumListenerHelper(int boardSize) {
-        System.out.println("MEDIUM");
-        gui.getBoardPanel().setP2('m');
-        setNewBoard(boardSize);
-        gui.getBoardPanel().setColorP2(Color.BLACK);
-        gui.getBoardPanel().setP2('m');
-    }
-
-    /**
-     * Action Listener for medium AI button
-     */
-    static class MediumListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            Controller.sizeRequest2("Start a new game against mediumAI?", 'm');
-        }
-    }
-
-    /**
-     *
-     */
-    class ClickAdapter extends MouseAdapter {
-        public void mousePressed(MouseEvent e) {
-            int x = gui.locateXY(e.getX());
-            int y = gui.locateXY(e.getY());
-            new Thread(() -> {
-                Sound.playTileSound();
-            }).start();
-            System.out.println(gui.getBoardPanel().getP2().getIsReal());
-            System.out.println("P2 is of  type: " + gui.getBoardPanel().getP2().getClass());
-            if (gui.getBoardPanel().getP2() instanceof Human) {
-                HumanVHuman(x, y);
-            } else if (gui.getBoardPanel().getP2() instanceof MedCompAI) {
-                HumanVsAI(x, y, model);
-            } else if (gui.getBoardPanel().getP2() instanceof EasyCompAI) {
-                HumanVsAI(x, y, model);
-            }
-            gui.getBoardPanel().drawBoard();
-        }
-    }
-
-    /**
-     *
-     */
-    class PaintHelperListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            gui.colorChooserHelper('1');
-        }
-    }
-
-    /**
-     *
-     */
-    class PaintHelper2Listener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            gui.colorChooserHelper('2');
-        }
-    }
-
-    private static void sizeRequest2(String text, char test) {
+    private void sizeRequest2(String text, char test) {
         Object[] options = {"15x15", "9x9"};
         Object[] yesOrNo = {"Yes", "No"};
         new Thread(() -> {
-            Sound.playAlertSound();
+            sound.playAlertSound();
         }).start();
 
 
@@ -239,11 +138,13 @@ public class Controller {
         }
     }
 
-    protected static void sizeRequest(String text) {
+    protected void sizeRequest(String text) {
         Object[] options = {"15x15", "9x9"};
         Object[] yesOrNo = {"Yes", "No"};
 
-        Sound.playAlertSound();
+        new Thread(() -> {
+            sound.playAlertSound();
+        }).start();
 
         int confirm = JOptionPane.showOptionDialog(gui, text, "confirm",
                 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
@@ -255,11 +156,122 @@ public class Controller {
                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                     null, options, options[1]);
             if (n == JOptionPane.YES_OPTION) {
-                setNewBoard(15);
+                setNewBoard(15,gui.getBoardPanel().getP2().playerType,gui.getBoardPanel().getColorP1(),gui.getBoardPanel().getColorP2());
             } else {
-                setNewBoard(9);
+                setNewBoard(9,gui.getBoardPanel().getP2().playerType,gui.getBoardPanel().getColorP1(),gui.getBoardPanel().getColorP2());
             }
         }
+    }
+
+    protected void easyListenerHelper(int boardSize) {
+        Color p1ColorTmp=gui.getBoardPanel().getColorP1();
+        Color p2ColorTmp=gui.getBoardPanel().getColorP2();
+        setNewBoard(boardSize,gui.getBoardPanel().getP2().playerType,gui.getBoardPanel().getColorP1(),gui.getBoardPanel().getColorP2());
+        gui.getBoardPanel().setColorP1(p1ColorTmp);
+        gui.getBoardPanel().getP1().setTileColor(p1ColorTmp);
+        gui.getBoardPanel().setColorP2(p2ColorTmp);
+
+    }
+
+    public   void setNewBoard(int boardSize,char gameType,Color p1C,Color p2C){
+        gui.getBoardPanel().setBoard(new Board(boardSize));
+        gui.setSquareSize(boardSize);
+        gui.getBoardPanel().setP2(gameType);
+        gui.getBoardPanel().setGrid(boardSize);
+        gui.getBoardPanel().drawBoard();
+        gui.getBoardPanel().setVisible(true);
+        gui.getBoardPanel().setColorP1(p1C);
+        gui.getBoardPanel().setColorP2(p2C);
+    }
+
+    protected void MediumListenerHelper(int boardSize) {
+        gui.getBoardPanel().setP2('m');
+        setNewBoard(boardSize,gui.getBoardPanel().getP2().playerType,gui.getBoardPanel().getColorP1(),gui.getBoardPanel().getColorP2());
+        gui.getBoardPanel().setColorP2(Color.BLACK);
+        gui.getBoardPanel().setP2('m');
+    }
+
+    /**
+     *
+     */
+    class ClickAdapter extends MouseAdapter {
+        public void mousePressed(MouseEvent e) {
+            int x = gui.locateXY(e.getX());
+            int y = gui.locateXY(e.getY());
+            sound.playTileSound();
+//            System.out.println(gui.getBoardPanel().getP2().getIsReal());
+//            System.out.println("P2 is of  type: " + gui.getBoardPanel().getP2().getClass());
+            if (gui.getBoardPanel().getP2() instanceof Human) {
+                HumanVHuman(x, y);
+            } else if (gui.getBoardPanel().getP2() instanceof MedCompAI) {
+                HumanVsAI(x, y, model);
+            } else if (gui.getBoardPanel().getP2() instanceof EasyCompAI) {
+                HumanVsAI(x, y, model);
+            }
+            gui.getBoardPanel().drawBoard();
+        }
+
+    }
+
+    /**
+     * Action Listener for the Play Button on the Tool Bar
+     */
+    class PlayListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            sizeRequest("Start new game?");
+        }
+    }
+
+    /**
+     * Action Listener for the Paintbrush Button
+     */
+    class PaintListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            gui.colorChooser();
+        }
+    }
+
+    /**
+     * Action Listener for easy AI button
+     */
+    class EasyListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            sizeRequest2("Start a new game against easyAI?", 'e');
+        }
+    }
+
+    /**
+     * Action Listener for medium AI button
+     */
+    class MediumListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            sizeRequest2("Start a new game against mediumAI?", 'm');
+        }
+
+    }
+
+    /**
+     *
+     */
+    class PaintHelperListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            gui.colorChooserHelper('1');
+        }
+
+    }
+
+    /**
+     * Listener for button within the Color Chooser reserved for player two
+     */
+    class PaintHelper2Listener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            gui.colorChooserHelper('2');
+        }
+
     }
 
 

@@ -32,10 +32,18 @@ public class ConnectFive extends JFrame {
     private int squareSize = 15;
     private Color color;
 
+    // Buttons on ToolBar
     private JButton playButton;
     private JButton paintButton;
     private JButton easyButton;
     private JButton mediumButton;
+    // Menu
+    private JMenuItem changeSize;
+    private JMenuItem easyDifficulty;
+    private JMenuItem mediumDifficulty;
+    private JMenuItem changeColors;
+    private JMenuItem online;
+
     private JButton p1 = new JButton("Player 1");
     private JButton p2 = new JButton("Player 2");
 
@@ -122,35 +130,6 @@ public class ConnectFive extends JFrame {
 
     }
 
-    public void addEasyListener(ActionListener eal) {
-        easyButton.addActionListener(eal);
-    }
-
-    public void addMediumListener(ActionListener mal) {
-        mediumButton.addActionListener(mal);
-    }
-
-    public void addPlayListener(ActionListener pal) {
-        playButton.addActionListener(pal);
-    }
-
-    public void addPaintListener(ActionListener paintal) {
-        paintButton.addActionListener(paintal);
-    }
-
-    public void addPaintHelperListener(ActionListener actionL) {
-        p1.addActionListener(actionL);
-    }
-
-    public void addPaintHelper2Listener(ActionListener aEvent) {
-        p2.addActionListener(aEvent);
-    }
-
-    public void addMouseListener(MouseListener e) {
-        boardPanel.addMouseListener(e);
-
-    }
-
     private JMenuBar menuBar() {
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Game");
@@ -159,15 +138,19 @@ public class ConnectFive extends JFrame {
         menuBar.add(menu);
 
         //Create Menu Items & set Icons
-        JMenuItem changeSize = new JMenuItem("Change Size");
+        changeSize = new JMenuItem("Change Size");
         changeSize.setIcon(createImageIcon("play.png"));
-        JMenuItem easyDifficulty = new JMenuItem("Play V.S COM (EASY)");
+
+        easyDifficulty = new JMenuItem("Play V.S COM (EASY)");
         easyDifficulty.setIcon(createImageIcon("easy.png"));
-        JMenuItem mediumDifficulty = new JMenuItem("Play V.S COM (MEDIUM)");
+
+        mediumDifficulty = new JMenuItem("Play V.S COM (MEDIUM)");
         mediumDifficulty.setIcon(createImageIcon("medium.png"));
-        JMenuItem ChageColors = new JMenuItem("Change Colors");
-        ChageColors.setIcon(createImageIcon("paint.png"));
-        JMenuItem online = new JMenuItem("Play Online");
+
+        changeColors = new JMenuItem("Change Colors");
+        changeColors.setIcon(createImageIcon("paint.png"));
+
+        online = new JMenuItem("Play Online");
         online.setIcon(createImageIcon("wifi-green.png"));
 
         // set keyStrokes
@@ -177,24 +160,18 @@ public class ConnectFive extends JFrame {
                 ActionEvent.ALT_MASK));
         mediumDifficulty.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M,
                 ActionEvent.ALT_MASK));
-        ChageColors.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,
+        changeColors.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,
                 ActionEvent.ALT_MASK));
         online.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
                 ActionEvent.ALT_MASK));
 
         changeSize.getAccessibleContext().setAccessibleDescription("Play new game");
 
-        // listeners
-        changeSize.addActionListener(new Controller.PlayListener());
-        easyDifficulty.addActionListener(new Controller.EasyListener());
-        mediumDifficulty.addActionListener(new Controller.MediumListener());
-        ChageColors.addActionListener(new Controller.PaintListener());
-
         // add to mennu
         menu.add(changeSize);
         menu.add(easyDifficulty);
         menu.add(mediumDifficulty);
-        menu.add(ChageColors);
+        menu.add(changeColors);
         menu.add(online);
 
         return menuBar;
@@ -270,7 +247,6 @@ public class ConnectFive extends JFrame {
         //frametmp.repaint();
     }
 
-
     /**
      * takes the pixels in the window and divides it by board size
      * to return the coordinate of each square in the board grid
@@ -298,7 +274,7 @@ public class ConnectFive extends JFrame {
     }
 
 
-    JLabel getMessage() {
+    protected JLabel getMessage() {
         return message;
     }
 
@@ -320,5 +296,37 @@ public class ConnectFive extends JFrame {
 
     public void setBoardPanel(BoardPanel boardPanel) {
         this.boardPanel = boardPanel;
+    }
+
+    public void addMouseListener(MouseListener e) {
+        boardPanel.addMouseListener(e);
+    }
+
+    public void addEasyListener(ActionListener e) {
+        easyButton.addActionListener(e);
+        easyDifficulty.addActionListener(e);
+    }
+
+    public void addMediumListener(ActionListener e) {
+        mediumButton.addActionListener(e);
+        mediumDifficulty.addActionListener(e);
+    }
+
+    public void addPlayListener(ActionListener e) {
+        playButton.addActionListener(e);
+        changeSize.addActionListener(e);
+    }
+
+    public void addPaintListener(ActionListener e) {
+        paintButton.addActionListener(e);
+        changeColors.addActionListener(e);
+    }
+
+    public void addPaintHelperListener(ActionListener e) {
+        p1.addActionListener(e);
+    }
+
+    public void addPaintHelper2Listener(ActionListener e) {
+        p2.addActionListener(e);
     }
 }

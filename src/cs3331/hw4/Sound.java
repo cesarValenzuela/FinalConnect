@@ -12,20 +12,20 @@ public class Sound{
     /**
      *
      */
-    static void playWinSound(){
+     void playWinSound(){
         playSound("src\\Sound\\winSound.wav");
     }
-    static void playTileSound(){
+     void playTileSound(){
         playSound("src\\Sound\\click (1).wav");
     }
-    static void playInvalidTileSound(){
+     void playInvalidTileSound(){
         playSound("src\\Sound\\errorSound.wav");
     }
 
-    public static void playAlertSound(){
+    public void playAlertSound(){
         playSound("src\\Sound\\alertSound.wav");
     }
-    private static void playSound(String fileName){
+    private void playSound(String fileName){
         try{
             Clip audioClip=AudioSystem.getClip();
             audioClip.open(AudioSystem.getAudioInputStream(new File(fileName)));
