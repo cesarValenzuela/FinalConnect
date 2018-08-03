@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
+import java.net.BindException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -25,19 +26,23 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
     public NetworkGUI view;
     private Board model;
     private NetworkAdapter network;
-    //private Sound sound;
+    private int isServer;
+    private boolean pass = false; // check server accepted client
+    private ServerSocket servSocket;
 
     private NetworkController(Board model, NetworkGUI gui) {
         super(model, gui);
 
         view = gui;
         this.model = model;
+        //view.getBoardPanel().set
 
+        view.addMouseListener(new NetworkClickAdapter());
         view.addOnlineButtonListener(new OnlineListener());
-        view.addMouseListener(new ClickAdapter());
         view.addConnectListener(new ClientListener());
         view.addHostButtonListener(new ServerListener());
         view.addDisconnectListener(new DisconnectListener());
+        view.addPlayWithFriendListener(new PlayWithFriendListener());
     }
 
     private int popUpAns(String prompt) {
@@ -78,70 +83,95 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         network.receiveMessagesAsync();
     }
 
-    /**
-     * Checks if network is connected or null
-     *
-     * @return boolean, true if connected
-     */
-    private boolean isNetwork() {
-        if (network == null) {
-            return false;
-        }
-        return true;
-    }
-
     @Override
     public void messageReceived(NetworkAdapter.MessageType type, int x, int y, int z, int[] others) {
         switch (type) {
             case JOIN:
+
                 int n = JOptionPane.showConfirmDialog(null, "Join client?");
                 if (n == JOptionPane.YES_OPTION) {
+                    pass = true;
                     network.writeJoinAck(15);
+                    updateToolBarON(); // icon
+                    System.out.println("connected = true ");
+
+                    new Thread(() ->{
+
+                    } ).start();
+                    // missing connect sound //
+
+                    alertUser();
                 } else {
+
                     network.writeJoinAck();
                 }
                 //sound.playConnectedSound();
                 break;
 
             case JOIN_ACK:
-                int jc = popUpAns("blah");
-                if (jc == 0) {
+
+                //pass = true;
+                if(!pass){
                     System.out.println("Yes, game joined");
-                } else {
-                    System.out.println("Game declined");
+                    // play connected sound
+                    updateToolBarON();
+                    alertUser();
+                }else{
+                    clientDenied();
+                    System.out.println("game declined");
                 }
+//                int jc = popUpAns("blah");
+//                if (jc == 0) {
+//                    System.out.println("Yes, game joined");
+//                } else {
+//                    System.out.println("Game declined");
+//                }
                 break;
 
             case NEW:
+
                 System.out.println("NEW");
                 writeNewPopUP();
 
                 break;
 
             case NEW_ACK:
+
                 System.out.println("NEW ACK");
+                if(x == 1){
+                    setNewBoard();
+                }else{
+                    popUpAns("New Game Denied");
+                }
                 break;
 
             case FILL:
+
                 System.out.println("FILL CASE");
                 try {
-                    model.addDisc(x, y, z);
+                    view.getBoardPanel().getBoard().addDisc(x,y,z);
+                    network.writeFillAck(x,y,z);
+                    view.getBoardPanel().repaint();
                 } catch (InValidDiskPositionException ex) {
                     System.out.println("WRONG PLACEMENT");
                 }
                 break;
 
             case FILL_ACK:
+
                 System.out.println("FILL ACK");
                 try {
 
-                    model.addDisc(x, y, z);
+                    System.out.println("fill ack x y z");
+                    view.getBoardPanel().getBoard().addDisc(x,y,z);
+                    view.getBoardPanel().repaint();
                 } catch (InValidDiskPositionException ex) {
                     System.out.println("WRONG PLACEMENT");
                 }
                 break;
 
             case QUIT:
+
                 System.out.println("Quitting : One moment");
                 int quit = popUpAns("BLEE");
                 if(quit == 0){
@@ -151,31 +181,98 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
             case CLOSE:
                 System.out.println("Close case.");
+                updateToolBarOFF();
                 checkClose();
                 break;
 
             case UNKNOWN:
+
                 System.out.println("unknown");
                 break;
         }
     }
 
-    private void checkClose() {
-        network.writeQuit();
-        System.out.println("check close");
+    protected  void sizeRequest3(String text){
+        Object[] yesOrNo = {"Yes", "No"};
+
+        sound.playAlertSound();
+
+        int confirm = JOptionPane.showOptionDialog(view,text, "confirm",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
+                null, yesOrNo, yesOrNo[1]);
+        if (confirm == JOptionPane.YES_OPTION) {
+            network.writeNew(15);//here size doesn't matter
+        }
     }
 
-    class ClickAdapter extends MouseAdapter {
+
+    void setNewBoard(){
+        Object[] options = {"15x15", "9x9"};
+        int n = JOptionPane.showOptionDialog(view,
+                "pick a size", "New Game",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
+                null,options, options[1]);
+        if (n == JOptionPane.YES_OPTION) {
+            System.out.println("new board 15X15");
+            super.setNewBoard(15,view.getBoardPanel().getP2().playerType,view.getBoardPanel().getColorP1(),view.getBoardPanel().getColorP2());
+        }else{
+            System.out.println("New board 9X9");
+            super.setNewBoard(9,view.getBoardPanel().getP2().playerType,view.getBoardPanel().getColorP1(),view.getBoardPanel().getColorP2());
+        }
+        //HERE MAYBE SEND SOMETHING?
+
+    }
+
+    private void checkClose() {
+        network.writeQuit();
+        System.out.println("method called from close");
+    }
+
+    protected void updateToolBarON(){
+        view.changeNetworkImageON();
+    }
+    protected void updateToolBarOFF(){
+        view.changeNetworkImageOFF();
+    }
+    protected void alertUser(){
+        view.alertUser();
+    }
+    protected void clientDenied(){
+        view.clientDenied();
+    }
+
+    class NetworkClickAdapter extends ClickAdapter {
         @Override
         public void mousePressed(MouseEvent e) {
-            //super.mousePressed(e);
             int x = view.locateXY(e.getX());
             int y = view.locateXY(e.getY());
-            System.out.println("network connected: " + isNetwork());
+//            if(network == null){
+//                System.out.println("Socket closed");
+//                if(view.getBoardPanel().getP2() instanceof Human){
+//                    HumanVHuman(x,y);
+//                }else if(view.getBoardPanel().getP2() instanceof MedCompAI){
+//                    HumanVsAI(x,y,model);
+//                }else if(view.getBoardPanel().getP2() instanceof EasyCompAI){
+//                    HumanVsAI(x,y,model);
+//                }
+//            }else{
+//                network.writeFill(x,y, isServer);
+//            }
 
-            if (network != null) {
-                network.writeFill(x, y, 1);
-            }
+
+//            if (network != null) {
+//                network.writeFill(x, y, 1);
+//            }
+//            if (network.socket() != null)
+//
+//            if (view.getBoardPanel().getP2() instanceof Human) {
+//                HumanVHuman(x, y);
+//            } else if (view.getBoardPanel().getP2() instanceof MedCompAI) {
+//                HumanVsAI(x, y, model);
+//            } else if (view.getBoardPanel().getP2() instanceof EasyCompAI) {
+//                HumanVsAI(x, y, model);
+//            }
+//            view.getBoardPanel().drawBoard();
         }
     }
 
@@ -188,11 +285,17 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             new Thread(() -> {
                 try {
                     System.out.println("Server Starting");
-                    ServerSocket servSocket = new ServerSocket(view.getPortNumber());
+                    servSocket = new ServerSocket(view.getPortNumber());
                     Socket incoming = servSocket.accept();
+                    isServer = 1;
+
                     pairAServer(incoming);
-                } catch (Exception ex) {
+                } catch (BindException ex) {
+                    ex.printStackTrace();
+
                     System.out.println("SERVER FAILURE");
+                } catch (IOException ex) {
+                    ex.printStackTrace();
                 }
             }).start();
         }
@@ -211,9 +314,28 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                     Socket socket = new Socket();
                     socket.connect(new InetSocketAddress(view.getNameField(), view.getPortField2()), 5000);
                     pairAsClient(socket);
-
+                    isServer = 2;
                 } catch (Exception e1) {
                     System.out.println("CLIENT FAILURE");
+                }
+            }).start();
+        }
+    }
+
+    /**
+     *
+     */
+    class PlayWithFriendListener implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            //if not connected
+            new Thread(() -> {
+                try {
+                    System.out.println("Hey I want to start a new game");
+                    //view.getBoardPanel().setVisible(true);
+                    sizeRequest3("Create a new game?");
+                }catch (NullPointerException ex){
+                    System.out.println("PlaywithFriendsListener error");
                 }
             }).start();
         }
@@ -235,8 +357,15 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
     class DisconnectListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            network.close();
-            isNetwork();
+            try {
+                network.close();
+                servSocket.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }catch (Exception e1){
+                System.out.println("ALREADY CLOSED U FUCK");
+            }
+            //isNetwork();
         }
     }
 

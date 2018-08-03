@@ -194,11 +194,12 @@ public class Controller {
     /**
      *
      */
-    class ClickAdapter extends MouseAdapter {
+    protected class ClickAdapter extends MouseAdapter {
         public void mousePressed(MouseEvent e) {
             int x = gui.locateXY(e.getX());
             int y = gui.locateXY(e.getY());
             sound.playTileSound();
+            System.out.println("LOL SUPER CLASS");
 //            System.out.println(gui.getBoardPanel().getP2().getIsReal());
 //            System.out.println("P2 is of  type: " + gui.getBoardPanel().getP2().getClass());
             if (gui.getBoardPanel().getP2() instanceof Human) {
@@ -211,6 +212,7 @@ public class Controller {
             gui.getBoardPanel().drawBoard();
         }
 
+        // LOCAL BUTTON TO SEPARATE GAME LOGIC METHODS
     }
 
     /**

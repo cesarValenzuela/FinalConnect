@@ -72,7 +72,7 @@ public class BoardPanel extends JPanel {
         repaint();
     }
 
-    Color getColorP1() {
+    public Color getColorP1() {
         return p1.getTileColor();
     }
 
@@ -80,7 +80,7 @@ public class BoardPanel extends JPanel {
         p1.setTileColor(color);
     }
 
-    Color getColorP2() {
+    public Color getColorP2() {
         return p2.getTileColor();
     }
 
@@ -88,7 +88,7 @@ public class BoardPanel extends JPanel {
         p2.setTileColor(colorP2);
     }
 
-    Board getBoard() {
+    public Board getBoard() {
         return board;
     }
 

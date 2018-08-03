@@ -9,7 +9,7 @@ public abstract class Player {
     protected int currX;
     protected int currY;
     protected boolean isReal;
-    protected char playerType;
+    public char playerType;
     public boolean getIsReal(){
         return isReal;
     }

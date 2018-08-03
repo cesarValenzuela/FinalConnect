@@ -59,7 +59,6 @@ public class ConnectFive extends JFrame {
      * including anonymous classes for the handlers.
      */
     protected ConnectFive() {
-
         setTitle("Connect Five");
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,8 +66,9 @@ public class ConnectFive extends JFrame {
         //here we need to change it to be able to change to p2 type
         createGUI(15, 'j');
 
-        setVisible(true);
         pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     protected ConnectFive(int size, char p2Type) {
@@ -274,7 +274,7 @@ public class ConnectFive extends JFrame {
     }
 
 
-    protected JLabel getMessage() {
+    public JLabel getMessage() {
         return message;
     }
 

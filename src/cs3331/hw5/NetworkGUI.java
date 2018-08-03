@@ -68,6 +68,23 @@ public class NetworkGUI extends ConnectFive {
         return portNum;
     }
 
+    public void createOnlinePanel() {
+        JFrame f = new JFrame("Connection");
+        JPanel panel = new JPanel();
+        panel.setSize(400, 400);
+        f.setResizable(false);
+        f.add(panel);
+        f.setSize(400, 400);
+        f.setLayout(null);
+        f.setVisible(true);
+
+        JPanel playerPanel = makePlayerPanel();
+        panel.add(playerPanel);
+
+        JPanel peerPanel = makePeerPanel();
+        panel.add(peerPanel);
+    }
+
     protected JPanel makePlayerPanel() {
         JPanel panel = new JPanel();
 
@@ -89,23 +106,6 @@ public class NetworkGUI extends ConnectFive {
         panel.setVisible(true);
 
         return panel;
-    }
-
-    public void createOnlinePanel() {
-        JFrame f = new JFrame("Connection");
-        JPanel panel = new JPanel();
-        panel.setSize(400, 400);
-        f.setResizable(false);
-        f.add(panel);
-        f.setSize(400, 400);
-        f.setLayout(null);
-        f.setVisible(true);
-
-        JPanel playerPanel = makePlayerPanel();
-        panel.add(playerPanel);
-
-        JPanel peerPanel = makePeerPanel();
-        panel.add(peerPanel);
     }
 
     protected JPanel makePeerPanel() {
@@ -130,14 +130,30 @@ public class NetworkGUI extends ConnectFive {
 
     }
 
-
     JButton getPlayWithFriend() {
         return getPlayWithFriend();
+    }
+
+    // Modifies Status of the Network on toolbar(),  Green = ON  Red = OFF
+    protected void changeNetworkImageOFF() {
+        onlineButton.setIcon(createImageIcon("wifi-red.png")) ;
+    }
+    protected void changeNetworkImageON() {
+        onlineButton.setIcon(createImageIcon("wifi-green.png")) ;
+    }
+    //Alerts
+    protected void alertUser() {
+        JOptionPane.showMessageDialog( null, "Connection to online Player Successful!" );
+    }
+    protected void clientDenied() {
+        JOptionPane.showMessageDialog( null, "Host did not accept you :( " );
     }
 
     void setVisiblePlayWithFriendVisibility(boolean visibility){
         playWithFriend.setVisible(visibility);
     }
+
+
 
     void addHostButtonListener(ActionListener e) {
         host.addActionListener(e);
