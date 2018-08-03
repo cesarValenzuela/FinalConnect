@@ -115,7 +115,7 @@ public class ConnectFive extends JFrame {
         easyButton = new JButton(createImageIcon("easy30.png"));
         mediumButton = new JButton(createImageIcon("medium30.png"));
 
-        playButton.setToolTipText("Play a new game.");
+        playButton.setToolTipText("Play local.");
         playButton.setFocusPainted(false);
         paintButton.setToolTipText("Customize Disc Colors");
         easyButton.setToolTipText("Play against Easy Computer");
@@ -278,11 +278,11 @@ public class ConnectFive extends JFrame {
         return message;
     }
 
-    boolean isTurn() {
+    public boolean isTurn() {
         return turn;
     }
 
-    void setTurn(boolean turn) {
+    public void setTurn(boolean turn) {
         this.turn = turn;
     }
 
@@ -329,4 +329,6 @@ public class ConnectFive extends JFrame {
     public void addPaintHelper2Listener(ActionListener e) {
         p2.addActionListener(e);
     }
+
+
 }

@@ -25,6 +25,10 @@ public class Controller {
     private ConnectFive gui;
     protected Sound sound;
 
+    private boolean localPlay;
+    private boolean easyPlay;
+    private boolean medPlay;
+
     protected Controller(Board model, ConnectFive gui) {
         this.model = model;
         this.gui = gui;
@@ -41,6 +45,19 @@ public class Controller {
         gui.addPaintHelper2Listener(new PaintHelper2Listener());
     }
 
+
+    public void gameDecide(int x, int y){
+
+        if(localPlay){
+            HumanVHuman(x,y);
+        }else if(easyPlay){
+            HumanVsAI(x,y,model);
+        }else if(medPlay){
+
+        }else{
+            gui.getMessage().setText("CHOOSE A GAME MODE");
+        }
+    }
 
     public void HumanVHuman(int x, int y) {
         try {
@@ -73,7 +90,6 @@ public class Controller {
             //System.out.println("AI MOVE");
             gui.getBoardPanel().getP2().setMove(x,y,board);
             gui.getBoardPanel().getBoard().addDisc(gui.getBoardPanel().getP2().currX, gui.getBoardPanel().getP2().currY,2);
-
         } catch (InValidDiskPositionException ex1) {
             gui.getMessage().setText("INVALID PLACEMENT");
             new Thread(() -> {
@@ -199,16 +215,18 @@ public class Controller {
             int x = gui.locateXY(e.getX());
             int y = gui.locateXY(e.getY());
             sound.playTileSound();
-            System.out.println("LOL SUPER CLASS");
 //            System.out.println(gui.getBoardPanel().getP2().getIsReal());
 //            System.out.println("P2 is of  type: " + gui.getBoardPanel().getP2().getClass());
-            if (gui.getBoardPanel().getP2() instanceof Human) {
-                HumanVHuman(x, y);
-            } else if (gui.getBoardPanel().getP2() instanceof MedCompAI) {
-                HumanVsAI(x, y, model);
-            } else if (gui.getBoardPanel().getP2() instanceof EasyCompAI) {
-                HumanVsAI(x, y, model);
-            }
+//            if (gui.getBoardPanel().getP2() instanceof Human) {
+//                HumanVHuman(x, y);
+//            } else if (gui.getBoardPanel().getP2() instanceof MedCompAI) {
+//                HumanVsAI(x, y, model);
+//            } else if (gui.getBoardPanel().getP2() instanceof EasyCompAI) {
+//                HumanVsAI(x, y, model);
+//            }
+
+            gameDecide(x,y);
+
             gui.getBoardPanel().drawBoard();
         }
 
@@ -222,6 +240,9 @@ public class Controller {
 
         public void actionPerformed(ActionEvent e) {
             sizeRequest("Start new game?");
+            easyPlay = false;
+            medPlay = false;
+            localPlay = true;
         }
     }
 
@@ -242,6 +263,9 @@ public class Controller {
 
         public void actionPerformed(ActionEvent e) {
             sizeRequest2("Start a new game against easyAI?", 'e');
+            localPlay = false;
+            medPlay = false;
+            easyPlay = true;
         }
     }
 
@@ -252,6 +276,9 @@ public class Controller {
 
         public void actionPerformed(ActionEvent e) {
             sizeRequest2("Start a new game against mediumAI?", 'm');
+            localPlay = false;
+            medPlay = false;
+            easyPlay = true;
         }
 
     }
