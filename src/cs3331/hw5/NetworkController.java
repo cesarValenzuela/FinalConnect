@@ -93,7 +93,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 int n = JOptionPane.showConfirmDialog(null, "Join client?");
                 if (n == JOptionPane.YES_OPTION) {
-                    pass = true;
+                    //pass = true;
                     network.writeJoinAck(15);
                     updateToolBarON(); // icon
                     System.out.println("connected = true ");
@@ -110,22 +110,19 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
             case JOIN_ACK:
 
-                //pass = true;
-                if (!pass) {
-                    System.out.println("Yes, game joined");
-                    // play connected sound
-                    updateToolBarON();
-                    alertUser();
-                } else {
+
+                if (x == 1) {
+                    if(popUpAns("join?") == 0){
+                        System.out.println("game joined");
+                        updateToolBarON();
+                        alertUser();
+                    }else{
+                        System.out.println("denied");
+                        clientDenied();
+                    }
+                }else{
                     clientDenied();
-                    System.out.println("game declined");
                 }
-//                int jc = popUpAns("blah");
-//                if (jc == 0) {
-//                    System.out.println("Yes, game joined");
-//                } else {
-//                    System.out.println("Game declined");
-//                }
                 break;
 
             case NEW:
@@ -149,7 +146,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 System.out.println("FILL CASE");
                 try {
-                    view.getBoardPanel().getBoard().addDisc(x, y, z);
+                    view.getBoardPanel().getBoard().addDisc(x-1, y-1, z);
                     network.writeFillAck(x, y, z);
                     view.getBoardPanel().repaint();
                 } catch (InValidDiskPositionException ex) {
@@ -219,12 +216,15 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             if(view.isTurn()) {
                 //change label at bottom
                 view.getMessage().setText("Player 2's turn");
+                network.writeFill(x,y,isServer);
+                view.setTurn(false);
 
                 //view.getBoardPanel().getP1().setMove(x, y);
                 //view.getBoardPanel().getBoard().addDisc(view.getBoardPanel().getP1().currX - 1, view.getBoardPanel().getP1().currY - 1, 1);
-                view.setTurn(false);
             }else {
                 view.getMessage().setText("Player 1's turn");
+                network.writeFill(x,y,isServer);
+                        view.setTurn(true);
                 //iew.getBoardPanel().getP2().setMove(x, y);
                 //view.getBoardPanel().getBoard().addDisc(view.getBoardPanel().getP2().currX - 1, view.getBoardPanel().getP2().currY - 1, 2);
             }
@@ -366,7 +366,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                     //view.getBoardPanel().setVisible(true);
                     sizeRequest3("Create a new game?");
                 } catch (NullPointerException ex) {
-                    System.out.println("PlaywithFriendsListener error");
+                    System.out.println("Play withFriendsListener error");
                 }
             }).start();
         }

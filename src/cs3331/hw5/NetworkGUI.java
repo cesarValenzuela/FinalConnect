@@ -136,23 +136,25 @@ public class NetworkGUI extends ConnectFive {
 
     // Modifies Status of the Network on toolbar(),  Green = ON  Red = OFF
     protected void changeNetworkImageOFF() {
-        onlineButton.setIcon(createImageIcon("wifi-red.png")) ;
+        onlineButton.setIcon(createImageIcon("wifi-red.png"));
     }
+
     protected void changeNetworkImageON() {
-        onlineButton.setIcon(createImageIcon("wifi-green.png")) ;
+        onlineButton.setIcon(createImageIcon("wifi-green.png"));
     }
+
     //Alerts
     protected void alertUser() {
-        JOptionPane.showMessageDialog( null, "Connection to online Player Successful!" );
-    }
-    protected void clientDenied() {
-        JOptionPane.showMessageDialog( null, "Host did not accept you :( " );
+        JOptionPane.showMessageDialog(null, "Connection to online Player Successful!");
     }
 
-    void setVisiblePlayWithFriendVisibility(boolean visibility){
+    protected void clientDenied() {
+        JOptionPane.showMessageDialog(null, "Host did not accept you :( ");
+    }
+
+    void setVisiblePlayWithFriendVisibility(boolean visibility) {
         playWithFriend.setVisible(visibility);
     }
-
 
 
     void addHostButtonListener(ActionListener e) {
@@ -171,7 +173,7 @@ public class NetworkGUI extends ConnectFive {
         disconnectButton.addActionListener(e);
     }
 
-    void addPlayWithFriendListener(ActionListener actionListener){
+    void addPlayWithFriendListener(ActionListener actionListener) {
         playWithFriend.addActionListener(actionListener);
     }
 }

@@ -502,6 +502,7 @@ public class NetworkAdapter {
      *
      * @see #writeJoin()
      */
+    // was 0
     public void writeJoinAck() {
         writeMsg(MessageType.JOIN_ACK.header + "0");
     }
