@@ -28,10 +28,10 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
     private NetworkAdapter network;
 
 
-    private int isServer;
-    private boolean pass = false; // check server accepted client
     private ServerSocket servSocket;
-    private boolean onlinePlay;
+    private boolean onlinePlay = false;
+    private boolean turn = true;
+    private boolean isServer;
 
     private NetworkController(Board model, NetworkGUI gui) {
         super(model, gui);
@@ -112,15 +112,15 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
 
                 if (x == 1) {
-                    if(popUpAns("join?") == 0){
+                    if (popUpAns("join?") == 0) {
                         System.out.println("game joined");
                         updateToolBarON();
                         alertUser();
-                    }else{
+                    } else {
                         System.out.println("denied");
                         clientDenied();
                     }
-                }else{
+                } else {
                     clientDenied();
                 }
                 break;
@@ -146,6 +146,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 System.out.println("FILL CASE");
                 try {
+                    turn = true;
                     view.getBoardPanel().getBoard().addDisc(x-1, y-1, z);
                     network.writeFillAck(x, y, z);
                     view.getBoardPanel().repaint();
@@ -158,10 +159,14 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
                 System.out.println("FILL ACK");
                 try {
-
+                    //turn = false;
                     System.out.println("fill ack x y z");
-                    view.getBoardPanel().getBoard().addDisc(x, y, z);
+
+
+                    view.getBoardPanel().getBoard().addDisc(x-1, y-1, z);
+                    //count++;
                     view.getBoardPanel().repaint();
+                    network.writeJoinAck(-5);
                 } catch (InValidDiskPositionException ex) {
                     System.out.println("WRONG PLACEMENT");
                 }
@@ -184,6 +189,8 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
 
             case UNKNOWN:
 
+                //turn = true;
+                view.getBoardPanel().setEnabled(false);
                 System.out.println("unknown");
                 break;
         }
@@ -212,31 +219,28 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
     }
 
     public void onlineGame(int x, int y) {
-        try {
-            if(view.isTurn()) {
-                //change label at bottom
-                view.getMessage().setText("Player 2's turn");
-                network.writeFill(x,y,isServer);
-                view.setTurn(false);
 
-                //view.getBoardPanel().getP1().setMove(x, y);
-                //view.getBoardPanel().getBoard().addDisc(view.getBoardPanel().getP1().currX - 1, view.getBoardPanel().getP1().currY - 1, 1);
-            }else {
-                view.getMessage().setText("Player 1's turn");
-                network.writeFill(x,y,isServer);
-                        view.setTurn(true);
-                //iew.getBoardPanel().getP2().setMove(x, y);
-                //view.getBoardPanel().getBoard().addDisc(view.getBoardPanel().getP2().currX - 1, view.getBoardPanel().getP2().currY - 1, 2);
-            }
+        if(isServer){
 
-        } catch (Exception ex) {
-            System.out.println("inv");
+            view.getMessage().setText("1 turn");
+            network.writeFill(x, y, 1);
+            view.getBoardPanel().drawBoard();
+        }else{
+            onlineGame2(x,y);
         }
+    }
+
+    public void onlineGame2(int x, int y){
+
+            view.getMessage().setText("2 turn");
+            network.writeFill(x, y, 2);
+            view.getBoardPanel().drawBoard();
+
     }
 
     @Override
     public void gameDecide(int x, int y) {
-        super.gameDecide(x, y);
+        //super.gameDecide(x, y);
         if (onlinePlay) {
             onlineGame(x, y);
         }
@@ -276,6 +280,8 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         public void mousePressed(MouseEvent e) {
             int x = view.locateXY(e.getX());
             int y = view.locateXY(e.getY());
+
+
             gameDecide(x, y);
 //            if(network == null){
 //                System.out.println("Socket closed");
@@ -315,10 +321,10 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
         public void actionPerformed(ActionEvent e) {
             new Thread(() -> {
                 try {
+                    isServer = true;
                     System.out.println("Server Starting");
                     servSocket = new ServerSocket(view.getPortNumber());
                     Socket incoming = servSocket.accept();
-                    isServer = 1;
 
                     pairAServer(incoming);
                 } catch (BindException ex) {
@@ -342,10 +348,10 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             new Thread(() -> {
                 System.out.println("client starting");
                 try {
+                    isServer = false;
                     Socket socket = new Socket();
                     socket.connect(new InetSocketAddress(view.getNameField(), view.getPortField2()), 5000);
                     pairAsClient(socket);
-                    isServer = 2;
                 } catch (Exception e1) {
                     System.out.println("CLIENT FAILURE");
                 }
@@ -365,6 +371,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
                     System.out.println("Hey I want to start a new game");
                     //view.getBoardPanel().setVisible(true);
                     sizeRequest3("Create a new game?");
+
                 } catch (NullPointerException ex) {
                     System.out.println("Play withFriendsListener error");
                 }
@@ -400,6 +407,7 @@ public class NetworkController extends Controller implements NetworkAdapter.Mess
             //isNetwork();
         }
     }
+
 
     public static void main(String[] args) {
         Board model = new Board(15);

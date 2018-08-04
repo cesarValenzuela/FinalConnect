@@ -51,6 +51,7 @@ public class NetworkGUI extends ConnectFive {
         return toolBar;
     }
 
+    //client
     protected int getPortField2() {
         int portNum = Integer.parseInt(portField2.getText());
         System.out.println("Client Port Num: " + portNum);
@@ -70,6 +71,7 @@ public class NetworkGUI extends ConnectFive {
 
     public void createOnlinePanel() {
         JFrame f = new JFrame("Connection");
+        f.setLocationRelativeTo(null);
         JPanel panel = new JPanel();
         panel.setSize(400, 400);
         f.setResizable(false);
@@ -94,7 +96,7 @@ public class NetworkGUI extends ConnectFive {
         ipField.setEditable(false);
 
         JLabel portNum = new JLabel("Port number: ");
-        portField = new JTextField("8000", 12);
+        portField = new JTextField("8444", 12);
 
         panel.setBorder(BorderFactory.createTitledBorder("Player"));
         panel.setLayout(new GridLayout(4, 2, 5, 5));
@@ -114,7 +116,7 @@ public class NetworkGUI extends ConnectFive {
 
         nameField = new JTextField("127.0.0.1", 12);
         JLabel portNum = new JLabel("Port number: ");
-        portField2 = new JTextField("8000", 12);
+        portField2 = new JTextField("8444", 12);
 
         panel.setBorder(BorderFactory.createTitledBorder("Peer"));
         panel.setLayout(new GridLayout(3, 2, 5, 5));
